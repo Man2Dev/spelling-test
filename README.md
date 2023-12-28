@@ -18,9 +18,20 @@ This Bash script is designed to assist with spelling training by providing a too
 - -b: Enable text-to-speech output using gtts-cli with audio playback through mpv.
 
 ## Usage Example
+When prompted, enter the spelling of the prompted words or sentences, and follow the instructions to continue.
+
+## File Structure
+- word.txt: Input file containing words for spelling practice.
+- correct.txt: Output file to store correctly spelled words or sentences.
+- wrong.txt: Output file to store incorrectly spelled words or sentences.
+- reread.txt: Output file to store words or sentences that need to be reread.
+
+**Note**: Before executing the script, ensure the input files (word.txt) contain the words or sentences for the training.
+
+## Contributing
+- If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
 
 ## Copyright
-
 spelling-test is released under version 3 or later of the GPL, the GNU General Public License.
 See [license.txt](license.txt).
 
