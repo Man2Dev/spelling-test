@@ -32,8 +32,8 @@ When prompted, enter the spelling of the prompted words or sentences, and follow
 - If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
 
 ## Copyright
-spelling-test is released under version 3 or later of the GPL, the GNU General Public License.
-See [license.txt](license.txt).
+spelling-test is released under version 3 or later of the GPL, the GNU General Public License
+see the [license.txt](license.txt) file for details.
 
 The author of spelling-test:
 
