@@ -3,6 +3,13 @@
 # Set default values
 flag1=false
 flag2=false
+# set default path for files
+directory=~/Documents/spelling
+# Set paths to the word and correct files in the home directory
+word_file="$directory"/word.txt
+correct_file="$directory"/correct.txt
+wrong_file="$directory"/wrong.txt
+reread_file="$directory"/reread.txt
 
 # Parse command line flags
 while getopts "ab" opt; do
@@ -22,13 +29,27 @@ done
 
 # Set IFS to ', ' to separate words by comma and space
 IFS=','
-# make folder if there is non
-mkdir -p ~/Documents/spelling
-# Set paths to the word and correct files in the home directory
-word_file=~/Documents/spelling/word.txt
-correct_file=~/Documents/spelling/correct.txt
-wrong_file=~/Documents/spelling/wrong.txt
-reread_file=~/Documents/spelling/reread.txt
+
+# Create the directory if it doesn't exist
+if [ ! -d "$directory" ]; then
+	mkdir -p "$directory"
+fi
+
+# Change to the directory
+cd "$directory" || exit
+
+# Check if the files exist and create them if they don't
+for file in word.txt correct.txt wrong.txt; do
+	if [ ! -f "$file" ]; then
+		touch "$file"
+		echo "File $file created in $directory 📄"
+	fi
+done
+
+if [ ! -s "$wrong_file" ]; then
+	echo "The file $wrong_file is empty."
+	echo -e "Please enter your words or sentences with a \033[31m','\033[0m in between each entery."
+fi
 
 # total words
 tw=0
