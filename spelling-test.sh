@@ -128,7 +128,7 @@ function outouts {
 		espeak-ng "$word"
 	else
 		gtts-cli "$word" -l en -o .w.mp3
-		mpv --no-config profile=big-cache --quiet .w.mp3 1>/dev/null
+		mpv --no-config profile=big-cache --no-terminal .w.mp3 1>/dev/null
 	fi
 
 	# Prompt user to spell the word
