@@ -28,6 +28,10 @@ When prompted, enter the spelling of the prompted words or sentences, and follow
 
 **Note**: Before executing the script, ensure the input files (word.txt) contain the words or sentences for the training.
 
+## TODO
+add support for:
+[] translate-shell
+
 ## Contributing
 - If you'd like to contribute to this project, feel free to fork the repository and submit a pull request.
 
